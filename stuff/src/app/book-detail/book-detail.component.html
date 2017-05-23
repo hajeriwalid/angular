@@ -1,0 +1,15 @@
+<p>
+  book-detail works! cool
+</p>
+<div *ngIf="book">
+      <h2>{{book.name}} details!</h2>
+      <div><label>id: </label>{{book.id}}</div>
+      <div>
+        <label>name: </label>
+        <input [(ngModel)]="book.name" placeholder="bookname"/>
+      </div>
+      <div>
+        <label>title: </label>
+        <input [(ngModel)]="book.title" placeholder="booktitle"/>
+      </div>
+</div>
