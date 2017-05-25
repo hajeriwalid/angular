@@ -1,15 +1,16 @@
 <p>
   book-detail works! cool
 </p>
-<div *ngIf="book">
-      <h2>{{book.name}} details!</h2>
-      <div><label>id: </label>{{book.id}}</div>
+
+<div *ngIf="selectedBook">
+      <h2>{{selectedBook.name}} details!</h2>
+      <div><label>id: </label>{{selectedBook.id}}</div>
       <div>
         <label>name: </label>
-        <input [(ngModel)]="book.name" placeholder="bookname"/>
+        <input [(ngModel)]="selectedBook.name" placeholder="name"/>
       </div>
       <div>
-        <label>title: </label>
-        <input [(ngModel)]="book.title" placeholder="booktitle"/>
+        <label>author: </label>
+        <input [(ngModel)]="selectedBook.author" placeholder="author"/>
       </div>
-</div>
+    </div>

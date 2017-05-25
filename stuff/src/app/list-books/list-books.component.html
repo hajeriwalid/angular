@@ -2,8 +2,24 @@
   list-books works!
 </p>
 <h1>{{title}}</h1>
-<ul>
-  <li *ngFor= "let books of listofBooks">
-    {{books}}
+<ul class="books">
+  <li *ngFor= "let book of listofBooks"
+      [class.selected]="book === selectedBook"
+       (click)="onSelect(book)">
+    <span class="badge">{{book.id}}</span> {{book.name}}
+    - {{book.author}}
   </li>
 </ul>
+
+<div *ngIf="selectedBook">
+      <h2>{{selectedBook.name}} details!</h2>
+      <div><label>id: </label>{{selectedBook.id}}</div>
+      <div>
+        <label>name: </label>
+        <input [(ngModel)]="selectedBook.name" placeholder="name"/>
+      </div>
+      <div>
+        <label>author: </label>
+        <input [(ngModel)]="selectedBook.author" placeholder="author"/>
+      </div>
+    </div>
