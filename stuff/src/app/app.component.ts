@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works! walid';
+  title = 'Simple Angule 4 based app - Walid Hajeri - book management';
+
 }
