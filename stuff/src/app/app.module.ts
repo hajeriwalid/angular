@@ -9,11 +9,16 @@ import { AppComponent } from './app.component';
 import { SearchItemsComponent } from './search-items/search-items.component';
 import { ListBooksComponent } from './list-books/list-books.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { AddbookComponent } from './addbook/addbook.component';
 
 RouterModule.forRoot([
   {
     path: 'listbooks',
     component: ListBooksComponent
+  },
+    {
+    path: 'addbook',
+    component: AddbookComponent
   }
 ])
 
@@ -22,7 +27,8 @@ RouterModule.forRoot([
     AppComponent,
     SearchItemsComponent,
     BookDetailComponent,
-    ListBooksComponent
+    ListBooksComponent,
+    AddbookComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,12 @@ RouterModule.forRoot([
       {
         path: 'listbooks',
         component: ListBooksComponent
+      }
+    ]),
+     RouterModule.forRoot([
+      {
+        path: 'addbook',
+        component: AddbookComponent
       }
     ])
   ],

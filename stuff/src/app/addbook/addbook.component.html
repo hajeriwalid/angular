@@ -1,0 +1,18 @@
+<p>
+  addbook works!
+</p>
+{{diagnostic}}
+
+ <form #addbookForm="ngForm"> <!--The NgForm directive supplements the form element with additional features. It holds the controls you created for the elements with an ngModel directive and name attribute, and monitors their properties, including their validity. It also has its own valid property which is true only if every contained control is valid.-->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="abook.name" class="form-control" id="name"  #name="ngModel" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" [(ngModel)]="abook.author" class="form-control" id="author" name="author" #author="ngModel">
+      </div>
+      <button type="submit" class="btn btn-success" (click)="onSubmit();">Submit</button>
+      <!--T<form (ngSubmit)="onSubmit()" #addbookForm="ngForm">-->
+
+    </form>

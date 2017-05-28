@@ -16,11 +16,7 @@ export class BookDetailComponent implements OnInit {
 
   //book: Book;
 
-  selectedBook: Book;
 
-  onSelect(book: Book): void {
-    this.selectedBook = book;
-  }
 
   ngOnInit() {
   }

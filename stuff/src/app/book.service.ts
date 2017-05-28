@@ -26,4 +26,9 @@ export class BookService {
         return listofBooks;
      }
 
+     addBook(mybook : Book):void {
+         console.log("Book Service : " + JSON.stringify(mybook));
+         listofBooks.push(mybook);
+     }
+
 }

@@ -4,6 +4,12 @@
 <!--
 <app-search-items></app-search-items>
 -->
-
-<a routerLink="/listbooks">List of Books</a>
+<nav>
+<a routerLink="/listbooks" routerLinkActive="active" >List of Books</a>
    <router-outlet></router-outlet>
+
+
+<a routerLink="/addbook" routerLinkActive="active">Add a Book</a>
+   <router-outlet></router-outlet>
+
+   </nav>
