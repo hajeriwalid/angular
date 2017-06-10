@@ -3,7 +3,7 @@
 </p>
 <h1>{{title}}</h1>
 <ul class="books">
-  <li *ngFor= "let book of listofBooks"
+  <li *ngFor= "let book of listofBooks "   
       [class.selected]="book === selectedBook"
        (click)="onSelect(book)">
     <span class="badge">{{book.id}}</span> {{book.name}}

@@ -23,7 +23,7 @@ export class AddbookComponent implements OnInit {
   onSubmit() { 
     console.log("submitted");
     this.submitted = true; 
-    this.bookService.addBook(this.abook);
+  //  this.bookService.addBook(this.abook);
 }
 
   // TODO: Remove this when we're done

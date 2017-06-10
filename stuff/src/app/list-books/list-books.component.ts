@@ -18,8 +18,7 @@ export class ListBooksComponent implements OnInit {
 
   constructor(private bookService: BookService) { }
 
-  listofBooks = this.bookService.getBooks();
-
+  listofBooks = this.bookService.getBooks().then(listofBooks => this.listofBooks = listofBooks);
 
   selectedBook: Book;
 
